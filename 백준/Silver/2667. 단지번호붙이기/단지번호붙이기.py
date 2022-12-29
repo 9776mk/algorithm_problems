@@ -1,6 +1,6 @@
 from collections import deque
 
-def dfs(a, b):
+def bfs(a, b):
     queue = deque()
     queue.append((a, b))
     cnt = 1
@@ -45,7 +45,7 @@ for i in range(N):
     for j in range(N):
         if graph[i][j] != 0 and visited[i][j] == False:
             total_ += 1
-            result.append(dfs(i, j))
+            result.append(bfs(i, j))
 
 print(total_)
 result.sort()
